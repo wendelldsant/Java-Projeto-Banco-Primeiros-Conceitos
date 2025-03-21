@@ -12,6 +12,15 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
+    public void exibeDados(){
+        System.out.println("\n********************************\n");
+        System.out.println("Titular: " + this.titular);
+        System.out.println("Número da conta: " + this.numeroConta);
+        System.out.println("Saldo Atual: R$" + this.saldo);
+        System.out.println("\n********************************\n");
+
+    }
+
     public String getNumeroConta(){
         return this.numeroConta;
     }
@@ -22,6 +31,7 @@ public class ContaBancaria {
 
     public void setTitular(String nome){
         this.titular = nome;
+        System.out.println("Titular alterado com sucesso!");
     }
 
     public double getSaldo(){
@@ -29,18 +39,20 @@ public class ContaBancaria {
     }
 
     public void setSaldo(double valor){
-        this.saldo += valor;
+        this.saldo = valor;
     }
 
     public void depositar(double valor){
         this.saldo += valor;
         System.out.println("Depósito de " + valor + " feito com sucesso!");
+
     }
 
     public void sacar(double valor) throws SaldoInsuficienteException, LimiteSaquesException{
         if (valor > this.saldo){
             throw new SaldoInsuficienteException("Saldo insuficiente para completar operação.");
         }
+        System.out.println("Saque concluído com sucesso!");
         saldo -= valor;
     }
 
