@@ -1,4 +1,4 @@
-package cp2.heranca;
+package cp1.heranca;
 
 public class ContaBancaria {
 
@@ -45,7 +45,6 @@ public class ContaBancaria {
     public void depositar(double valor){
         this.saldo += valor;
         System.out.println("Depósito de " + valor + " feito com sucesso!");
-
     }
 
     public void sacar(double valor) throws SaldoInsuficienteException, LimiteSaquesException{

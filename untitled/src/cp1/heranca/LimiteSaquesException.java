@@ -1,4 +1,4 @@
-package cp2.heranca;
+package cp1.heranca;
 
 public class LimiteSaquesException extends Exception {
 

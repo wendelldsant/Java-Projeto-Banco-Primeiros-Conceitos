@@ -1,4 +1,4 @@
-package cp2.heranca;
+package cp1.heranca;
 
 import java.util.Scanner;
 
@@ -50,9 +50,6 @@ public class Main {
                     System.out.print("Digite o valor que deseja depositar: ");
                     double valor = leitura.nextDouble();
                     conta.depositar(valor);
-                    if (conta instanceof ContaCorrente) {
-                        conta.adicionaTaxa();  // Chama o método apenas se for ContaCorrente
-                    }
                     break;
                 case 1:
                     System.out.print("Digite o valor que deseja sacar: ");

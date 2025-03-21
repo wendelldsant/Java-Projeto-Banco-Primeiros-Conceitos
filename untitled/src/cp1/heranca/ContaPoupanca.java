@@ -1,4 +1,4 @@
-package cp2.heranca;
+package cp1.heranca;
 
 public class ContaPoupanca extends ContaBancaria {
 
@@ -16,6 +16,7 @@ public class ContaPoupanca extends ContaBancaria {
         setSaldo((getSaldo() + valor));
         acrescentaRendimento();
         System.out.println("Depósito de " + valor + " feito com sucesso!");
+        System.out.println("Rendimento de 15% aplicado. Novo saldo: " + getSaldo());
     }
 
 }

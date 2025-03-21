@@ -1,4 +1,4 @@
-package cp2.heranca;
+package cp1.heranca;
 
 public class ContaCorrente extends ContaBancaria{
 
@@ -8,10 +8,6 @@ public class ContaCorrente extends ContaBancaria{
 
     ContaCorrente(String numeroConta, String titular, double saldo){
         super(numeroConta, titular, saldo);
-    }
-
-    public int getQuantidadeSaques(){
-        return this.quantidadeSaques;
     }
 
     @Override
@@ -30,8 +26,15 @@ public class ContaCorrente extends ContaBancaria{
         if (getSaldo() > 10 && !taxaAdicionada){
             setSaldo(getSaldo() - 10);
             taxaAdicionada = true;
-            System.out.println("Taxa de manutenção de R$ 10,00 cobrada automaticamente.");
+            System.out.println("Taxa de manutenção mensal de R$ 10,00 cobrada automaticamente.");
         }
+    }
+
+    @Override
+    public void depositar(double valor){
+        setSaldo(getSaldo() + valor);
+        System.out.println("Depósito de " + valor + " feito com sucesso!");
+        adicionaTaxa();
     }
 
 }
